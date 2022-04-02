@@ -1,0 +1,23 @@
+package org.upkaari.api.common.controllers;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import org.jboss.resteasy.reactive.RestResponse;
+import org.jboss.resteasy.reactive.RestResponse.ResponseBuilder;
+
+public class RestResponseBuilder {
+	public static <T> RestResponse<T> ok(T body) {
+		return ResponseBuilder.ok(body).build();
+	}
+	public static RestResponse<Object> ok() {
+		return ResponseBuilder.ok().build();
+	}
+	public static RestResponse<Object> created(String uri) {
+		try {
+			return ResponseBuilder.created(new URI(uri)).entity(new Object()).build();
+		} catch (URISyntaxException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+}

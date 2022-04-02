@@ -1,0 +1,25 @@
+1646913450567	Delete elements
+1646914884061	Rename package 'context'
+1646914900820	Delete element
+1646925510643	Delete element
+1646925526004	Delete element
+1646928604679	Rename package 'utils'
+1646930775441	Rename type 'RestResponse'
+1646930792139	Rename type 'RestResponseBuilder'
+1646934184586	Delete element
+1646941405158	Rename package 'org.upkaari.api.common.spring'
+1646944250576	Rename package 'org.upkaari.api.service'
+1646944279691	Rename package 'org.upkaari.api.modules.service'
+1646945138062	Rename package 'org.upkaari.api.components.service'
+1647012647919	Rename type 'ResponseBuilder'
+1647032183595	Rename type 'Service'
+1647032206491	Rename type 'ServiceService'
+1647032223613	Rename type 'ServiceRepository'
+1647032238645	Rename type 'ServiceController'
+1647032298899	Rename package 'org.upkaari.api._03components.service'
+1647168592670	Delete element
+1647184405627	Delete elements
+1647184412807	Delete element
+1647191573162	Copy compilation unit
+1647191687075	Copy compilation units
+1647191713980	Copy compilation unit

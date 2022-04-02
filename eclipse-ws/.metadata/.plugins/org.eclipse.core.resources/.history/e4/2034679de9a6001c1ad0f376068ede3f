@@ -1,0 +1,22 @@
+package org.upkaari.api;
+
+import java.io.Serializable;
+
+import org.upkaari.api.components.work.Work;
+
+public abstract class CrudTest<T, ID extends Serializable> extends AbstractTestRestAssured{
+	private Class<T> simpleType;
+	private Class<T> arrayType;
+
+	public CrudTest(Class<T> simpleType, Class<T> arrayType) {
+		super();
+		this.simpleType = simpleType;
+		this.arrayType = arrayType;
+	}
+	protected void testAdd() throws Exception {
+	   	T obj = create();
+        String id = createResourceSuccess(getResourceUri(), obj);
+        Work[] list = getResource(getResourceUri(),Work[].class);
+	}
+	protected abstract T create();
+}

@@ -1,0 +1,42 @@
+package org.upkaari.api.components.work;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.is;
+
+import java.net.URL;
+
+import javax.ws.rs.core.Response.Status;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.upkaari.api.AbstractTestRestAssured;
+import org.upkaari.api.CrudTest;
+import org.upkaari.api._01controllers.WorkController;
+
+import io.quarkus.test.common.http.TestHTTPEndpoint;
+import io.quarkus.test.common.http.TestHTTPResource;
+import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.response.Response;
+@QuarkusTest
+public class WorkTest extends CrudTest{
+	@TestHTTPEndpoint(WorkController.class)
+	@TestHTTPResource
+    URL url;
+	
+	@BeforeAll
+	public void init() {
+		super.setResourceUri(url.toString());
+	}
+    @Test
+    public void testAdd() throws Exception {
+    	super.testAdd();
+    }
+
+    protected Work create(String name, String description) {
+    	Work obj = new Work();
+    	obj.setName(name);
+    	obj.setDescription(description);
+
+    	return obj;
+    }
+}

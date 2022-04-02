@@ -1,0 +1,8 @@
+package org.upkaari.api;
+
+import java.io.Serializable;
+
+public abstract class CrudTest<T, ID extends Serializable> extends AbstractTestRestAssured{
+
+	protected abstract T create();
+}

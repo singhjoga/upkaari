@@ -1,0 +1,5 @@
+package org.upkaari.api;
+
+public abstract class CrudTest {
+
+}
